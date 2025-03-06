@@ -2,7 +2,7 @@ docker rm -f $(docker ps -aq)
 docker rm -f web || true
 docker rmi -f $(docker images -q) || true
 docker build -t app .
-docker tag app maheshgowdamg25/webapp:latest
-echo "" | docker login -u maheshgowdamg25 --password-stdin
-docker push maheshgowdamg25/webapp:latest
-docker run -it -d --name web -p 8081:8080 maheshgowdamg25/webapp:latest
+docker tag app prajwal0303/webapp:latest
+echo "Prajwal@2003" | docker login -u prajwal0303 --password-stdin
+docker push prajwal0303/webapp:latest
+docker run -it -d --name web -p 8081:8080 prajwal0303/webapp:latest
